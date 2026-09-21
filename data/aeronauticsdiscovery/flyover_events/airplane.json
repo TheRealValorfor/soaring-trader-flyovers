@@ -1,0 +1,23 @@
+{
+  "template": "aeronauticsdiscovery:airplane",
+  "min_altitude": 280,
+  "max_altitude": 310,
+  "weight": 3,
+  "initial_velocity": {
+    "linear": [0.0, 0.0, 0.0],
+    "angular": [0.0, 0.0, 0.0],
+    "impulse": false
+  },
+  "dimensions": ["minecraft:overworld"],
+  "plan": {
+    "goals": [
+      { "type": "aeronauticsdiscovery:straight" },
+      { "type": "aeronauticsdiscovery:altitude", "min_altitude": 250, "max_altitude": 305 },
+      { "type": "aeronauticsdiscovery:terrain", "clearance": 24, "lookahead": 128, "max_pitch_degrees": 10 },
+      { "type": "aeronauticsdiscovery:avoid", "lookahead": 128, "max_bank_degrees": 25 }
+    ]
+  },
+  "biome_filter": {
+    "exclude": ["minecraft:jagged_peaks", "minecraft:frozen_peaks", "minecraft:stony_peaks", "minecraft:windswept_savanna", "*:*mountain*"]
+  }
+}

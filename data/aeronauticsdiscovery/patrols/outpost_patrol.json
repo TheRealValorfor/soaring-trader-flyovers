@@ -1,0 +1,28 @@
+{
+  "template": "aeronauticsdiscovery:airplane_pillager",
+  "target_structure": "minecraft:pillager_outpost",
+  "chance": 0.8,
+  "min_altitude": 240,
+  "max_altitude": 250,
+  "plan": {
+    "goals": [
+      {
+        "type": "aeronauticsdiscovery:orbit",
+        "target": "minecraft:pillager_outpost",
+        "radius": 90,
+        "direction": "ccw"
+      },
+      {
+        "type": "aeronauticsdiscovery:altitude",
+        "min_altitude": 230,
+        "max_altitude": 260
+      },
+      { "type": "aeronauticsdiscovery:terrain", "clearance": 24, "lookahead": 96, "max_pitch_degrees": 10 },
+      { "type": "aeronauticsdiscovery:avoid", "lookahead": 96, "max_bank_degrees": 25 }
+    ]
+  },
+  "dimensions": ["minecraft:overworld"],
+  "biome_filter": {
+    "exclude": ["minecraft:jagged_peaks", "minecraft:frozen_peaks", "minecraft:stony_peaks", "minecraft:windswept_savanna", "*:*mountain*"]
+  }
+}
